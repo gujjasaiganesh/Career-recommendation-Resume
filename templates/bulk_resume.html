@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulk Resume Analysis</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Reuse existing styles from resume.html */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #013a5c, #025d93);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+
+        .upload-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .resume-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .resume-card h3 {
+            color: #013a5c;
+            margin-bottom: 1rem;
+        }
+
+        .match-score {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4CAF50;
+            margin: 1rem 0;
+        }
+
+        .submit-button {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .submit-button:hover {
+            background: #45a049;
+        }
+
+        .file-input-wrapper {
+            margin: 1rem 0;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 150px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            resize: vertical;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1><i class="fas fa-folder-open"></i> Bulk Resume Analysis</h1>
+        <p>Upload multiple resumes and analyze them against a job description</p>
+    </div>
+
+    <div class="container">
+        <div class="upload-section">
+            <h2>Upload Resumes</h2>
+            <form action="/bulk-analyze" method="post" enctype="multipart/form-data">
+                <div class="file-input-wrapper">
+                    <input type="file" name="resumes" multiple accept=".pdf,.txt" required>
+                </div>
+                <textarea name="job_description" placeholder="Paste the job description here..." required></textarea>
+                <button type="submit" class="submit-button">
+                    <i class="fas fa-analytics"></i> Analyze All Resumes
+                </button>
+            </form>
+        </div>
+
+        {% if results %}
+        <div class="results-grid">
+            {% for result in results %}
+            <div class="resume-card">
+                <h3>{{ result.filename }}</h3>
+                <div class="match-score">Match Score: {{ result.match_score }}</div>
+                <p><strong>Feedback:</strong></p>
+                <p>{{ result.feedback }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html> 
